@@ -1,10 +1,4 @@
 .header {
-    position: relative;
-    background-color:#f4f0e7;
-    background-image: radial-gradient(#f0ece3 20%, transparent 0%),
-    radial-gradient(#f0ece3 20%, transparent 0%);
-    background-size: 40px 30px;
-    background-position: 0 0, 20px 15px;
     padding-bottom: 107px;
     &::before {
         display: none;
@@ -19,8 +13,8 @@
     }
     &__main-pack {
         position: absolute;
-        left: 30px;
-        top: 50px;
+        left: 168px;
+        top: 339px;
         z-index: 1;
     }
     &__right {
@@ -34,9 +28,163 @@
         display: flex;
         align-items: center;
         font-size: 23px;
+        margin-top: 30px;
+    }
+    &__info-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
     }
     &__list-text {
         width: 250px;
+        margin-left: 18px;
+    }
+    &__form {
+        border: 3px solid #84902c;
+        border-radius: 10px;
+        background: #fff;
+        width: 270px;
+        position: relative;
+        top: -8px;
+        &::before {
+            content: '';
+            background: #84902c url(../img/form-clock.png) no-repeat center center;
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -33px;
+        }
+    }
+    &__form-title {
+        font-size: 24px;
+        text-align: center;
+        margin-top: 25px;
+    }
+    &__price-box {
+        display: flex;
+        padding: 13px 25px 30px;
+        position: relative;
+        &::before {
+            content: '';
+            width: 100%;
+            background: url(../img/form-arrow.png) no-repeat center center;
+            height: 23px;
+            bottom: 0px;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    .price-old__nums {
+        color: #a2a1a1;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .price-type {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .price-curr {
+        padding-left: 14px;
+    }
+
+    .price_previous {
+        font-size: 28px;
+        position: relative;
+        &::before,
+        &::after {
+            content: '';
+            background: #f23c29;
+            width: 105%;
+            height: 1px;
+            display: block;
+            position: absolute;
+            top: 13px;
+            left: 0;
+        }
+        &::before {
+            transform: rotate(18deg);
+        }
+        &::after {
+            transform: rotate(-18deg);
+        }
+    }
+
+    .price_current {
+        font-size: 40px;
+        line-height: 30px;
+        letter-spacing: -2px;
+    }
+
+    .old-currency {
+        font-size: 16px;
+    }
+
+    .curr-currency {
+        font-size: 18px;
+    }
+
+    .price-curr__nums {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .price-type__text {
+        margin-bottom: 10px;
+    }
+
+    .price-old__text {
+        font-size: 13px;
+    }
+
+    .price-curr__text {
+        font-size: 14px;
+    }
+
+    &__price-left {
+        position: relative;
+        &::before {
+            content: '';
+            width: 1px;
+            height: 90%;
+            background: #d1d0d0;
+            position: absolute;
+            right: -1px;
+            top: 5%;
+        }
+    }
+    &__left-time {
+        font-size: 20px;
+        text-align: center;
+        padding: 0 20px;
+    }
+    &__left-nums-box {
+        display: flex;
+        justify-content: center;
+        margin-top: 14px;
+        flex-wrap: wrap;
+    }
+    &__left-item {
+        border: 2px solid #84902c;
+        border-radius: 5px;
+        margin: 0 1.5px;
+        &_push {
+            margin-right: 5.5px;
+        }
+        span {
+            font-size: 24px;
+            font-weight: 700;
+            padding: 6px 8px;
+            display: block;
+        }
     }
  }
 
@@ -103,6 +251,10 @@
     font-size: 72px;
     text-align: left;
     line-height: 66px;
+}
+
+.btn_header {
+    margin: 25px auto 29px;
 }
 
 @media (max-width: 1219px){
