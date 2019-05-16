@@ -1,10 +1,4 @@
 .header {
-    position: relative;
-    background-color:#f4f0e7;
-    background-image: radial-gradient(#f0ece3 20%, transparent 0%),
-    radial-gradient(#f0ece3 20%, transparent 0%);
-    background-size: 40px 30px;
-    background-position: 0 0, 20px 15px;
     padding-bottom: 107px;
     &::before {
         display: none;

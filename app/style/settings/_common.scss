@@ -80,6 +80,14 @@ svg {
 	color: #84902c;
 }
 
+.wave {
+	background-color:#f4f0e7;
+	background-image: radial-gradient(#f0ece3 20%, transparent 0%),
+	radial-gradient(#f0ece3 20%, transparent 0%);
+	background-size: 40px 30px;
+	background-position: 0 0, 20px 15px;
+}
+
 .wave::before,
 .wave::after {
 	content: '';
@@ -96,4 +104,8 @@ svg {
 .wave::after {
 	bottom: 0;
 	background: url(../img/wave-bottom.png) no-repeat center center / cover;
+}
+
+.text-orange {
+	color: #f98b2e;
 }
