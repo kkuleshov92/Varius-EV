@@ -1,6 +1,109 @@
 .header {
-
+    position: relative;
+    background-color:#f4f0e7;
+    background-image: radial-gradient(#f0ece3 20%, transparent 0%),
+    radial-gradient(#f0ece3 20%, transparent 0%);
+    background-size: 40px 30px;
+    background-position: 0 0, 20px 15px;
+    padding-bottom: 107px;
+    &::before {
+        display: none;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        position: relative;
+        padding-left: 497px;
+    }
+    &__main-pack {
+        position: absolute;
+        left: 30px;
+        top: 50px;
+        z-index: 1;
+    }
+    &__right {
+        padding-top: 40px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 23px;
+    }
+    &__list-text {
+        width: 250px;
+    }
  }
+
+.header-top {
+    background: rgba(255, 255, 255, .7);
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo-box {
+        display: flex;
+    }
+    &__img-box {
+        position: relative;
+        padding-left: 130px;
+        img {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+    &__cream {
+        font-size: 16px;
+        margin-left: 22px;
+        line-height: 68px;
+    }
+    &__nav {
+        display: flex;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        border-top: 3px solid transparent;
+        margin: 0 66px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            right: -74px;
+            top: 9px;
+            background: url(../img/header-nav-arrow.png) no-repeat center center;
+            width: 7px;
+            height: 44px;
+        }
+        &:hover {
+            border-top: 3px solid #fc8a1c;
+        }
+        &_last {
+            margin-right: 30px;
+            &::before {
+                display: none;
+            }
+        }
+    }
+    &__link-name {
+        font-size: 17px;
+        color: #222;
+        margin-left: 15px;
+    }
+}
+
+.title_main {
+    font-size: 72px;
+    text-align: left;
+    line-height: 66px;
+}
 
 @media (max-width: 1219px){
 

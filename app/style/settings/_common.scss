@@ -4,6 +4,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	overflow-x: hidden;
+	color: #222;
 }
 
 img {
@@ -38,7 +39,9 @@ svg {
 
 .title {	
 	font-size: 48px;
-	line-height: 1.3;
+	line-height: 50px;
+	text-align: center;
+	font-weight: 900;
 	@include r(1219){
 		font-size: 42px;
 	}
@@ -57,6 +60,10 @@ svg {
 	}
 }
 
+.text-medium {
+	font-weight: 500;
+}
+
 .text-bold {
 	font-weight: 700;
 }
@@ -73,3 +80,20 @@ svg {
 	color: #84902c;
 }
 
+.wave::before,
+.wave::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 107px;
+}
+
+.wave::before {
+	top: 0;
+	background: url(../img/wave-top.png) no-repeat center center / cover;
+}
+
+.wave::after {
+	bottom: 0;
+	background: url(../img/wave-bottom.png) no-repeat center center / cover;
+}
