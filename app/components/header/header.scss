@@ -1,5 +1,16 @@
 .header {
     padding-bottom: 107px;
+    background-color:#f4f0e7;
+    background-image: url(../img/header-tree.png), url(../img/people.png), url(../img/arcs.png), radial-gradient(#f0ece3 20%, transparent 0%),
+    radial-gradient(#f0ece3 20%, transparent 0%);
+    background-size:  auto auto, auto auto, auto auto, 40px 30px,40px 30px;
+    background-position: left calc(50% - 1450px) top 50px, left calc(50% - 402px) bottom 40px, left calc(50% - 10px) top 10px, 0 0,20px 15px;
+    background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
+
+
+    //url(../img/people.png) no-repeat left calc(50% - 100px) bottom 10px;
+
+
     &::before {
         display: none;
     }
