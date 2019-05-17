@@ -1,5 +1,5 @@
 .help {
-  padding: 160px 0 30px;
+  padding: 160px 0 35px;
   overflow: hidden;
 
   .title {
@@ -144,23 +144,61 @@
     background-color: #ccc4b3;
     border-radius: 50%;
     margin-right: 11px;
+
+    &:hover {
+      background-color: #b1b977;
+    }
   }
   .slick-dots .slick-active {
     width: 18px;
     height: 22px;
-    background: url('../img/help-active-dot.png') no-repeat center center;
+    background: transparent url('../img/help-active-dot.png') no-repeat center center;
     position: relative;
     top: -4px;
+
+    &:hover {
+      background-color: transparent;
+    }
   }
 
   &__btn {
     position: relative;
     padding: 15px 30px 0;
-    top: 20px;
+    top: 24px;
     z-index: 10;
   }
 }
+@media (max-width: 1399px) {
+  .help {
 
+    &__left {
+      margin-left: 50px;
+    }
+
+    &__right-slider {
+      width: 390px;
+      left: 730px;
+      top: 0;
+    }
+    &__img {
+      margin: -25px 0 25px -15px;
+    }
+    &__right-slide {
+
+      &::before {
+        width: 380px;
+        height: 380px;
+      }
+    }
+
+    &__prev {
+      left: -70px;
+    }
+    &__next {
+      right: -555px;
+    }
+  }
+}
 @media (max-width: 1219px){
   .help {
     padding: 120px 0 30px;
@@ -197,14 +235,171 @@
   }
 }
 @media (max-width: 1023px){
+  .help {
 
+    &__content {
+      flex-wrap: wrap;
+      &::before {
+        display: none;
+      }
+    }
+    .title {
+      text-align: center;
+
+      &::after {
+        margin: 20px auto;
+      }
+    }
+    &__left, &__right {
+      width: 100%;
+      padding-top: 0;
+    }
+
+    &__left {
+      margin-left: 0;
+    }
+
+    &__left-slider {
+      text-align: center;
+    }
+
+    &__left-slide {
+      flex-direction: column;
+      align-items: center;
+
+      &::before {
+        left: 51%;
+        transform: translateX(-61%);
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__left-number {
+      margin: 0;
+    }
+
+    &__right-slider {
+      position: static;
+      width: 380px;
+    }
+
+    &__right-slide {
+
+      &::before {
+        width: 370px;
+        height: 370px;
+      }
+    }
+
+    .slick-dots {
+      display: inline-block;
+      bottom: -460px;
+      text-align: center;
+    }
+
+    &__btn {
+      position: static;
+      margin-top: 70px;
+    }
+
+    &__prev  {
+      top: 50px;
+      left: 0;
+    }
+    &__next {
+      top: 50px;
+      right: 0;
+    }
+  }
 }
 @media (max-width: 767px){
 
 }
 @media (max-width: 639px){
+  .help {
 
+    &__right {
+      //margin-top: -30px;
+    }
+
+    &__right-slider {
+      width: 300px;
+    }
+    &__right-slide {
+
+      &::before {
+        width: 290px;
+        height: 290px;
+      }
+    }
+
+    .slick-dots {
+      bottom: -400px;
+    }
+
+    &__btn {
+      margin-top: 50px;
+    }
+
+    &__next, &__prev {
+      width: 40px;
+      //top: 80px;
+    }
+
+    &__left-text {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
 }
 @media (max-width: 479px){
+  .help {
 
+    &__next, &__prev {
+      width: 30px;
+      top: 115px;
+    }
+
+    &__left-text {
+      width: 100%;
+    }
+
+    &__right {
+      flex-direction: column;
+    }
+    .title {
+      &::after {
+        margin: 10px auto;
+      }
+    }
+    &__right-slider {
+      order: 1;
+      //margin-top: 30px;
+    }
+    .slick-dots {
+      display: none;
+    }
+    &__right-slide {
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__img {
+      order: 2;
+      margin-left: 40px;
+      margin: 20px 0 0 40px;
+    }
+
+    &__btn {
+      margin-top: 10px;
+    }
+  }
 }
