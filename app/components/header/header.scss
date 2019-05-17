@@ -6,11 +6,6 @@
     background-size:  auto auto, auto auto, auto auto, 40px 30px,40px 30px;
     background-position: left calc(50% - 1450px) top 50px, left calc(50% - 402px) bottom 40px, left calc(50% - 10px) top 10px, 0 0,20px 15px;
     background-repeat: no-repeat, no-repeat, no-repeat, repeat, repeat;
-
-
-    //url(../img/people.png) no-repeat left calc(50% - 100px) bottom 10px;
-
-
     &::before {
         display: none;
     }
@@ -197,6 +192,20 @@
             display: block;
         }
     }
+    &__go-to-next {
+        background: url(../img/go-to-next-section.png)no-repeat center center;
+        width: 25px;
+        height: 50px;
+        position: absolute;
+        left: 50%;
+        bottom: 17px;
+        transform: translateX(-50%);
+        cursor: pointer;
+        z-index: 1;
+        &:hover {
+            background: url(../img/go-to-next-section-hover.png)no-repeat center center;
+        }
+    }
  }
 
 .header-top {
@@ -243,6 +252,9 @@
         }
         &:hover {
             border-top: 3px solid #fc8a1c;
+            path {
+                fill: #fc8a1c;
+            }
         }
         &_last {
             margin-right: 30px;
@@ -269,7 +281,14 @@
 }
 
 @media (max-width: 1219px){
+    .header {
 
+    }
+    .header-top {
+        &__link {
+
+        }
+    }
 }
 @media (max-width: 1023px){
 
