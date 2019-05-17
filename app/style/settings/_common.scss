@@ -82,10 +82,10 @@ svg {
 
 .wave {
 	background-color:#f4f0e7;
-	background-image: radial-gradient(#f0ece3 20%, transparent 0%),
+	background-image: url(../img/arcs.png), radial-gradient(#f0ece3 20%, transparent 0%),
 	radial-gradient(#f0ece3 20%, transparent 0%);
-	background-size: 40px 30px;
-	background-position: 0 0, 20px 15px;
+	background-size: auto auto, 40px 30px, 40px 30px;
+	background-position: left calc(50% - 10px) top 10px, 0 0, 20px 15px;
 }
 
 .wave::before,
