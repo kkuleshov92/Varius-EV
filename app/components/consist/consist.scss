@@ -1,7 +1,6 @@
 .consist {
-  padding: 90px 0 60px;
-
-
+  padding: 90px 0 50px;
+  margin-bottom: 280px;
 
   .subtitle {
     text-align: center;
@@ -213,7 +212,7 @@
 }
 @media (max-width: 1023px){
   .consist {
-
+    margin-bottom: 0;
     &__content {
       justify-content: space-between;
     }
