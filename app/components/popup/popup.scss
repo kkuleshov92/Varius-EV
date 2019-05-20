@@ -211,7 +211,7 @@
 @media (max-width: 479px) {
   .ever-popup__close {
     top: 30px !important;
-    right: 0px !important;
+    right: 0 !important;
     &::before, &::after {
       height: 10px !important;
       background: #fff !important;
@@ -232,6 +232,5 @@
     .last__right {
       margin-left: -20px !important;
     }
-
   }
 }
