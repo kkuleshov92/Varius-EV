@@ -1,0 +1,237 @@
+.popup {
+  width: 720px !important;
+  z-index: 2;
+  &::before {
+    content: '';
+    display: block;
+    width: 680px;
+    height: 590px;
+    border-radius: 5px 5px 5px 50px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    z-index: -1;
+  }
+
+  &__wrap {
+    width: 700px;
+    height: 610px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f0e7;
+    background-image: radial-gradient(#f0ece3 20%,transparent 0%),radial-gradient(#f0ece3 20%,transparent 0%);
+    background-size: 40px 30px,40px 30px;
+    background-position: 0 0,20px 15px;
+    background-repeat: repeat,repeat;
+    border-radius: 5px 5px 5px 50px;
+    padding: 30px 65px 45px;
+    position: relative;
+    z-index: 0;
+  }
+
+  &__text {
+    color: #444444;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: center;
+  }
+
+  .price-old__nums {
+    color: #a2a1a1;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .price-type {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .price-curr {
+    padding-left: 14px;
+  }
+
+  .price_previous {
+    font-size: 28px;
+    position: relative;
+    &::before,
+    &::after {
+      content: '';
+      background: #f23c29;
+      width: 105%;
+      height: 1px;
+      display: block;
+      position: absolute;
+      top: 13px;
+      left: 0;
+    }
+    &::before {
+      transform: rotate(18deg);
+    }
+    &::after {
+      transform: rotate(-18deg);
+    }
+  }
+
+  .price_current {
+    font-size: 44px;
+    line-height: 30px;
+    letter-spacing: -2px;
+  }
+
+  .old-currency {
+    font-size: 16px;
+  }
+
+  .curr-currency {
+    font-size: 18px;
+  }
+
+  .price-curr__nums {
+    display: flex;
+    align-items: flex-end;
+  }
+  .ever-popup__inner {
+    width: 760px !important;
+  }
+  .price-type__text {
+    margin-bottom: 10px;
+  }
+
+  .price-old__text {
+    font-size: 13px;
+  }
+
+  .price-curr__text {
+    font-size: 14px;
+  }
+  .btn_header {
+    margin: 16px auto 15px;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  .last__left {
+    padding: 50px 0 0 0;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 130px;
+      height: 110px;
+      background: url('../img/popup-logo.png') no-repeat center center;
+      position: absolute;
+      top: -59px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .header__main-pack {
+    position: static;
+  }
+    .ever-popup__close:after, .ever-popup__close:before {
+      height: 2px !important;
+      background: #f93232 !important;
+
+    }
+}
+
+@media (max-width: 1219px) {
+  .popup {
+    .last__form {
+      top: 0;
+    }
+    .last__right {
+      padding-top: 0;
+    }
+    .last__img-pack-767 {
+      display: none !important;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .ever-popup__close {
+    top: 50px !important;
+    right: 20px !important;
+  }
+  .popup {
+    &::before {
+      left: 0;
+    }
+
+    &__wrap {
+      justify-content: space-around;
+      padding: 30px 50px 45px;;
+    }
+    .last__form {
+      margin: 0;
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .ever-popup__close {
+    top: 50px !important;
+    right: 0px !important;
+  }
+  .ever-popup__inner {
+    width: 400px !important;
+  }
+  .popup {
+    width: 400px !important;
+    &::before {
+      display: none;
+    }
+    &__wrap {
+      width: 400px !important;
+    }
+
+    .last__left {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 639px) {
+
+}
+
+@media (max-width: 479px) {
+  .ever-popup__close {
+    top: 30px !important;
+    right: 0px !important;
+    &::before, &::after {
+      height: 10px !important;
+      background: #fff !important;
+    }
+  }
+  .ever-popup__inner {
+    width: 280px !important;
+  }
+  .popup {
+    width:280px !important;
+    &::before {
+      display: none;
+    }
+    &__wrap {
+      width: 280px !important;
+      background: none;
+    }
+    .last__right {
+      margin-left: -20px !important;
+    }
+
+  }
+}
