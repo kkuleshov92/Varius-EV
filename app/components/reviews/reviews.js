@@ -6,11 +6,10 @@ $('.reviews__sub-img').click(function(){
 let slidersArr = [];
 
 function desktopSlider() {
-    for (i = 0; i < 8; i++) {
+    for (i = 1; i < 9; i++) {
         let elem = $('.reviews__item_' + i);
         slidersArr.push(elem);
     }
-    console.log(slidersArr);
 }
 
 desktopSlider();
@@ -64,7 +63,9 @@ function showSlider() {
             arrows: true,
             infinite: true,
             centerMode: true,
-            variableWidth: true
+            variableWidth: true,
+            prevArrow: '<button class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg" width="55" height="48" viewBox="0 0 55 48"><g><g><path fill="#ccc4b3" d="M0 23h.548L21.435.154l1.414 1.412L3.255 23H55v2H3.257l19.592 21.434-1.414 1.415L.549 25.001H0z"/></g></g></svg></button>',
+            nextArrow: '<button class="slick-next"><svg xmlns="http://www.w3.org/2000/svg" width="55" height="48" viewBox="0 0 55 48"><g><g><path fill="#ccc4b3" d="M0 23h.548L21.435.154l1.414 1.412L3.255 23H55v2H3.257l19.592 21.434-1.414 1.415L.549 25.001H0z"/></g></g></svg></button>'
         });
 
     } else {

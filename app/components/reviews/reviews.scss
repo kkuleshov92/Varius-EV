@@ -230,6 +230,16 @@
                 top: 178px;
             }
         }
+        &__effect {
+            &::before {
+                width: 200px;
+                left: -200px;
+            }
+            &::after {
+                width: 200px;
+                right: -200px;
+            }
+        }
     }
 }
 @media (max-width: 1023px){
@@ -361,19 +371,104 @@
         .slick-dots {
             bottom: 0px;
         }
+        .slick-prev,
+        .slick-next {
+            height: 48px;
+            width: 40px;
+            top: 300px;
+            z-index: 5;
+            svg {
+                max-width: 100%;
+            }
+            &:hover {
+                path {
+                    fill: #84902c;
+                }
+            }
+            &:focus {
+                path {
+                    fill: #ccc4b3;
+                }
+            }
+        }
+        .slick-prev {
+            left: 35px;
+            &::before {
+                content: '';
+            }
+        }
+        .slick-next {
+            right: 35px;
+            transform: rotate(180deg);
+            transform-origin: 20px 12px;
+            &::before {
+                content: '';
+            }
+        }
     }
 }
 @media (max-width: 767px){
     .reviews {
+        padding: 30px 0;
         &__item {
             width: 450px;
             margin: 0 60px;
         }
+        &__btns {
+            bottom: 50px;
+        }
+        &__text {
+            font-size: 18px;
+        }
+        &__effect {
+            font-size: 16px;
+            margin-top: 30px;
+        }
     }
 }
 @media (max-width: 639px){
-
+    .reviews {
+        &__item {
+            width: 360px;
+        }
+        .slick-prev,
+        .slick-next {
+            top: 260px;
+            width: 30px;
+        }
+        .slick-next {
+            transform-origin: 15px 12px;
+        }
+        &__btns {
+            bottom: 70px;
+        }
+        &__text {
+            font-size: 17px;
+        }
+        &__effect {
+            font-size: 15px;
+        }
+    }
 }
 @media (max-width: 479px){
+    .reviews {
+        padding: 25px 0;
+        &__item {
+            width: 300px;
+        }
+        &__btns {
+            bottom: 70px;
+        }
+        .slick-prev,
+        .slick-next {
+            top: 265px;
+        }
+        .slick-prev {
+            left: 0;
+        }
+        .slick-next {
+            right: 0;
+        }
 
+    }
 }
