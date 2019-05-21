@@ -125,9 +125,10 @@ svg {
 	background: linear-gradient(to right, #fd8412 0%, #f68b4a 50%, #fd8412 100%);
 	border-radius: 5px;
 	margin: 0 auto;
-	padding: 5px 51px;
+	padding: 7px 51px;
 	box-shadow: 0 5px 0 #de7821, 0 25px 15px -10px rgba(252,239,241,.8);
 	cursor: pointer;
+	line-height: 1.2;
 	&:hover {
 		background-image: linear-gradient(to right, #ff8900 0%, #f27e37 51%, #ff5a00 100%);
 	}
