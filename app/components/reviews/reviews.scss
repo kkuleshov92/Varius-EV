@@ -1,5 +1,6 @@
 .reviews {
     text-align: center;
+    padding-bottom: 40px;
     .container {
         position: relative;
     }
@@ -61,6 +62,9 @@
         .reviews__slide {
             display: block;
         }
+    }
+    &__btns {
+        display: none;
     }
     &__item {
         img {
@@ -183,13 +187,189 @@
 }
 
 @media (max-width: 1219px){
-
+    .reviews {
+        &__item_2 {
+            img {
+                left: calc(50% + 172px);
+                top: 344px;
+            }
+        }
+        &__item_3 {
+            img {
+                left: calc(50% + 225px);
+                top: 194px;
+            }
+        }
+        &__item_4 {
+            img {
+                left: calc(50% + 358px);
+                top: 385px;
+            }
+        }
+        &__item_5 {
+            img {
+                left: calc(50% + 390px);
+                top: 146px;
+            }
+        }
+        &__item_6 {
+            img {
+                left: calc(50% + -413px);
+                top: 187px;
+            }
+        }
+        &__item_7 {
+            img {
+                left: calc(50% + -276px);
+                top: 344px;
+            }
+        }
+        &__item_8 {
+            img {
+                left: calc(50% + -192px);
+                top: 178px;
+            }
+        }
+    }
 }
 @media (max-width: 1023px){
+    .reviews {
+        .title {
+            padding-top: 0;
+        }
+        &__item {
+            .reviews__sub-img {
+                display: none;
+            }
+            img {
+                position: static;
+                transform: none;
+                margin: 20px auto;
+            }
+        }
+        &__slide {
+            padding-top: 0;
+            display: block;
+        }
+        &__item {
+            .reviews__img {
+                display: block;
+            }
+        }
+        &__text {
+            width: auto;
+        }
+        &__btn {
+            display: none;
+        }
+        &__effect {
+            border: none;
+            padding: 10px;
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+        &__item {
+            width: 700px;
+            margin: 0 20px;
+        }
+        .slick-dots li {
+            width: 14px;
+            height: 14px;
+            background-color: #ccc4b3;
+            border-radius: 50%;
+            margin-right: 11px;
 
+            &:hover {
+                background-color: #b1b977;
+            }
+        }
+        .slick-dots .slick-active {
+            width: 18px;
+            height: 22px;
+            background: transparent url('../img/help-active-dot.png') no-repeat center center;
+            position: relative;
+            top: -4px;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        &__text {
+            max-height: 115px;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: '';
+                background: linear-gradient(to bottom, transparent 0%, #fff 90%);
+                position: absolute;
+                width: 100%;
+                height: 80px;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        &__more {
+            display: block;
+        }
+        &__text + .reviews__btns {
+            .reviews__more {
+                display: block;
+            }
+            .reviews__less {
+                display: none;
+            }
+        }
+        &__text.active + .reviews__btns{
+            .reviews__more {
+                display: none;
+            }
+            .reviews__less {
+                display: block;
+            }
+        }
+        &__text.active {
+            max-height: 1000px;
+            &::before {
+                display: none;
+            }
+        }
+        &__slide {
+            position: relative;
+        }
+        &__effect {
+            margin-top: 60px;
+            margin-bottom: 40px;
+            width: auto;
+        }
+        &__btns {
+            display: block;
+            font-size: 30px;
+            background: #fa8a2d;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 70px;
+            cursor: pointer;
+        }
+        .slick-dots {
+            bottom: 0px;
+        }
+    }
 }
 @media (max-width: 767px){
-
+    .reviews {
+        &__item {
+            width: 450px;
+            margin: 0 60px;
+        }
+    }
 }
 @media (max-width: 639px){
 

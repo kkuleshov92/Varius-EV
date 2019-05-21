@@ -33,6 +33,55 @@ $('.reviews__btn_next').click(function(){
      } else {
          $('.reviews__item_' + (indexSlide + 2)).addClass('active');
      }
-
-    console.log(indexSlide);
 });
+
+let slider1 = $('.reviews__list');
+
+function initSlider(slider, options) {
+    slider.on('init', function () {
+        setTimeout(function () {
+            slider.addClass('is-ready');
+        }, 100);
+    });
+    slider.not('.slick-initialized').slick(options);
+}
+
+
+function destroySlider(slider) {
+    if (slider.hasClass('slick-initialized')) {
+        slider.slick('unslick');
+    }
+}
+
+
+function showSlider() {
+    var tablet = ($(window).width()) < 1024;
+    if (tablet) {
+        initSlider(slider1, {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
+            infinite: true,
+            centerMode: true,
+            variableWidth: true
+        });
+
+    } else {
+        destroySlider(slider1);
+    }
+}
+showSlider();
+$(window).on('resize', showSlider);
+//----------------------------------------slider end
+
+
+$('.reviews__btns').click(function(){
+   $(this).closest('.reviews__btns').siblings('.reviews__text').toggleClass('active');
+});
+
+$('.reviews__list').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    $('.reviews__text').removeClass('active');
+});
+
+
