@@ -89,7 +89,7 @@
     .circle2 {
       top: 0;
       left: 2px;
-      transform: rotate(70deg);
+      transform: rotate(-30deg);
     }
 
     .circle3 {
@@ -224,8 +224,8 @@
   .order {
 
     &__number {
-      padding-left: 70px;
-      font-size: 180px;
+      padding-left: 85px;
+      font-size: 140px;
       margin-bottom: 0;
 
       &::after {
@@ -238,15 +238,15 @@
       &:nth-child(2) {
 
         .order__img {
-          left: 15px;
-          top: 40px;
+          left: 5px;
+          top: 24px;
         }
       }
     }
 
     &__img {
-      left: 15px;
-      top: 40px;
+      left: 5px;
+      top: 24px;
     }
   }
 }
