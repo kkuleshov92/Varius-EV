@@ -65,6 +65,10 @@ svg {
 	font-weight: 500;
 }
 
+input::-ms-clear {
+	display: none;
+}
+
 .text-bold {
 	font-weight: 700;
 }
