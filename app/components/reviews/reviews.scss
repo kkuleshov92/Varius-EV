@@ -206,6 +206,12 @@
 
 @media (max-width: 1219px){
     .reviews {
+
+        .title {
+            padding-top: 50px;
+            margin-bottom: 45px;
+        }
+
         &__item_2 {
             img {
                 left: calc(50% + 172px);
