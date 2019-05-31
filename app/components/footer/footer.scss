@@ -76,12 +76,32 @@
     }
 }
 
-@media (max-width: 1219px){
+@media (max-width: 1500px) {
+    .go-top-btn {
+        bottom: 245px;
+        right: 29px;
+    }
+    .go-to-top-title {
+        bottom: 200px;
+        &::before {
+            left: 27px;
+            top: -6.5px;
+            border: 1px solid transparent;
+            border-top: 1px solid #e3e9ef;
+            border-right: 1px solid #e3e9ef;
+        }
+    }
+}
+
+@media (max-width: 1350px){
 
 }
-@media (max-width: 1023px){
+@media (max-width: 1160px){
     .footer {
         margin-top: 0;
+    }
+    .go-top-btn {
+        display: none !important;
     }
 }
 @media (max-width: 999px){

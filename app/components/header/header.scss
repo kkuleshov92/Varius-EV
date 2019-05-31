@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    padding-bottom: 107px;
+    padding-bottom: 110px;
     background-color:#f4f0e7;
     background-image: url(../img/header-tree.png), url(../img/people.png), url(../img/arcs.png), radial-gradient(#f0ece3 20%, transparent 0%),
     radial-gradient(#f0ece3 20%, transparent 0%);
@@ -36,6 +36,47 @@
         align-items: center;
         font-size: 23px;
         margin-top: 30px;
+        position: relative;
+    }
+    &__item-check {
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        z-index: 10;
+        left: 73px;
+        top: 0px;
+        &::before,
+        &::after {
+            content: '';
+            width: 2px;
+            background: #84902c;
+            position: absolute;
+        }
+        &::before {
+            left: 10px;
+            top: 10px;
+            height: 11px;
+            transform: rotate(-45deg);
+        }
+        &::after {
+            top: 3px;
+            left: 20px;
+            transform: rotate(44deg);
+            height: 20px;
+        }
+    }
+    &__item-box-img {
+        position: relative;
+        border-radius: 50%;
+        background: #f98b33;
+        height: 100px;
+        width: 100px;
+    }
+    &__item-img {
+        position: relative;
+        left: 5px;
     }
     &__info-box {
         display: flex;
@@ -194,7 +235,7 @@
         }
     }
     &__go-to-next {
-        background: url(../img/go-to-next-section.png)no-repeat center center;
+        background: #fff;
         width: 25px;
         height: 50px;
         position: absolute;
@@ -203,8 +244,16 @@
         transform: translateX(-50%);
         cursor: pointer;
         z-index: 1;
-        &:hover {
-            //background: url(../img/go-to-next-section-hover.png)no-repeat center center;
+        border: 2px solid #84902c;
+        border-radius: 15px;
+        display: block;
+        &::before,
+        &::after {
+            content: '';
+            width: 7px;
+            height: 7px;
+            display: block;
+            background: $mainColor;
         }
     }
     &__img-pack-767 {
@@ -290,7 +339,7 @@
 
 
 
-@media (max-width: 1219px){
+@media (max-width: 1350px){
     .header {
         background-color: #f4f0e7;
         background-image: url(../img/people.png),url(../img/arcs.png),radial-gradient(#f0ece3 20%,transparent 0%),radial-gradient(#f0ece3 20%,transparent 0%);
@@ -311,6 +360,9 @@
         &__form {
             top: 40px;
         }
+        &__list-text {
+            width: 170px;
+        }
     }
     .header-top {
         &__link {
@@ -324,7 +376,7 @@
         font-size: 66px;
     }
 }
-@media (max-width: 1023px){
+@media (max-width: 1160px){
     .header {
         background-color: #f4f0e7;
         background-image: radial-gradient(#f0ece3 20%,transparent 0%),radial-gradient(#f0ece3 20%,transparent 0%);
@@ -423,6 +475,13 @@
         &__list {
             flex-direction: column;
         }
+        &__item-box-img {
+            width: 80px;
+            height: 80px;
+        }
+        &__item-check {
+            left: 60px;
+        }
     }
     .title_main {
         width: 100%;
@@ -435,6 +494,9 @@
         &__list-text {
             margin-top: 0;
         }
+        &__item-check {
+            left: 50px;
+        }
         &__item {
             img {
                 width: 70px;
@@ -445,6 +507,10 @@
         }
         &__item {
             margin-top: 20px;
+        }
+        &__item-box-img {
+            width: 70px;
+            height: 70px;
         }
     }
     .header-top {

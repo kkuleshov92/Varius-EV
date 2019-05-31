@@ -1,4 +1,4 @@
-$('.reviews__sub-img').click(function(){
+$('.reviews__item-img-box').click(function(){
     $('.reviews__item').removeClass('active');
     $(this).closest('.reviews__item').addClass('active');
 });
@@ -54,7 +54,7 @@ function destroySlider(slider) {
 
 
 function showSlider() {
-    var tablet = ($(window).width()) < 1024;
+    var tablet = ($(window).width()) < 1161;
     if (tablet) {
         initSlider(slider1, {
             slidesToShow: 1,

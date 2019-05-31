@@ -19,10 +19,10 @@ svg {
 	width: 1220px;
 	margin: 0 auto;
 	padding: 0 25px;
-	@include r(1219) {
+	@include r(1350) {
 		width: 1024px;
 	}
-	@include r(1023) {
+	@include r(1160) {
 		width: 768px;
 		padding: 0 10px;
 	}
@@ -43,10 +43,10 @@ svg {
 	line-height: 50px;
 	text-align: center;
 	font-weight: 900;
-	@include r(1219){
+	@include r(1350){
 		font-size: 42px;
 	}
-	@include r(1023){	
+	@include r(1160){
 		font-size: 36px;
 		line-height: 1.1;
 	}
@@ -100,7 +100,7 @@ input::-ms-clear {
 	position: absolute;
 	width: 100%;
 	height: 107px;
-	@include r(1023) {
+	@include r(1160) {
 		display: none;
 	}
 }
